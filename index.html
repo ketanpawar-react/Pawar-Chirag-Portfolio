@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chirag Pawar - Frontend Developer & Coder Portfolio. Skilled in HTML, CSS, JavaScript, React.js.">
+    <title>Chirag Pawar | Frontend Developer Portfolio</title>
+    
+    <!-- Standard Clean Google Fonts (Poppins & Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Remix Icons (for clean social and utility icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Background Ambient Glows -->
+    <div class="ambient-glow glow-top-left"></div>
+    <div class="ambient-glow glow-center-purple"></div>
+    <div class="ambient-glow glow-bottom-right"></div>
+
+    <!-- ================= 1. HEADER & NAVBAR ================= -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <!-- Website Logo -->
+            <a href="#home" class="nav-logo">
+                <span class="logo-accent">C</span>hirag<span class="logo-dot">.</span>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About me</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#journey" class="nav-link">My Journey</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Mobile Hamburger Button -->
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu">
+                <i class="ri-menu-3-line open-icon"></i>
+                <i class="ri-close-line close-icon"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main>
+
+        <!-- ================= PAGE 1: HERO / HOME ================= -->
+        <section id="home" class="section hero-section">
+            <div class="hero-container">
+                
+                <!-- Left Column: Greeting, Name & Social Icon Buttons -->
+                <div class="hero-col hero-left">
+                    <span class="hero-small-tag">Hello, I'm</span>
+                    <h1 class="hero-title hero-name">Chirag<br>Pawar</h1>
+                    <div class="hero-social-icons-group">
+                        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="hero-social-icon-btn" title="LinkedIn">
+                            <i class="ri-linkedin-fill"></i>
+                        </a>
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="hero-social-icon-btn" title="GitHub">
+                            <i class="ri-github-fill"></i>
+                        </a>
+                        <a href="mailto:chiragpawar@gmail.com" class="hero-social-icon-btn" title="Gmail">
+                            <i class="ri-mail-fill"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Center Column: Portrait Photo with Purple Glow Aura -->
+                <div class="hero-col hero-center">
+                    <div class="hero-avatar-wrapper">
+                        <div class="avatar-glow-ring"></div>
+                        <div class="hero-portrait-frame">
+                            <img src="assets/images/chirag_cropped.jpg" alt="Chirag Pawar - Frontend Developer" class="hero-portrait-img">
+                            <div class="hero-portrait-gradient-fade"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Profession & Resume Button Underneath -->
+                <div class="hero-col hero-right">
+                    <span class="hero-small-tag">Creative</span>
+                    <h2 class="hero-title hero-role">
+                        <span class="glow-text">Developer</span><br>&amp; Coder
+                    </h2>
+                    <div class="hero-resume-wrapper">
+                        <a href="assets/Chirag_Pawar_Resume.pdf" target="_blank" download="Chirag_Pawar_Resume.pdf" class="hero-resume-pill-btn" id="heroResumeBtn">
+                            <span>RESUME</span>
+                            <i class="ri-file-download-line"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ================= PAGE 2: ABOUT ME ================= -->
+        <section id="about" class="section about-section">
+            <div class="section-container">
+                <div class="about-grid">
+                    
+                    <!-- Left Column: Portrait Photo -->
+                    <div class="about-image-col">
+                        <div class="about-card-wrapper">
+                            <div class="about-glow-halo"></div>
+                            <div class="about-portrait-frame">
+                                <img src="assets/images/chirag_cropped.jpg" alt="Chirag Pawar - About" class="about-portrait-img">
+                                <div class="about-portrait-gradient-fade"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Bio Content -->
+                    <div class="about-content-col">
+                        <span class="section-tag glow-tag">About Me</span>
+                        <h2 class="section-heading">
+                            Creativity <span class="highlight-purple">Is My Passion</span>
+                        </h2>
+
+                        <div class="about-text-content">
+                            <p>
+                                I'm a <b class="highlight-purple-text">B.Com graduate</b> currently working in <b class="highlight-purple-text">USA accounting</b>, and I'm now transitioning into the IT field as a <b class="highlight-purple-text">Frontend Developer</b>.
+                            </p>
+                            <p>
+                                I have learned <b class="highlight-purple-text">HTML, CSS, JavaScript and React.js</b> and have built multiple <b class="highlight-purple-text">frontend projects</b> to strengthen my practical skills.
+                            </p>
+                            <p>
+                                I enjoy creating <b class="highlight-purple-text">responsive, user-friendly and modern web interfaces</b> and I'm continuously improving my <b class="highlight-purple-text">development skills</b>.
+                            </p>
+                        </div>
+
+                        <div class="about-action-row">
+                            <a href="assets/Chirag_Pawar_Resume.pdf" target="_blank" download="Chirag_Pawar_Resume.pdf" class="glow-pill-btn download-resume-btn" id="resumeActionBtn">
+                                <span>Download Resume</span>
+                                <i class="ri-download-2-line"></i>
+                            </a>
+                            <a href="#projects" class="outline-pill-btn">
+                                <span>View My Work</span>
+                                <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= PAGE 3: PROJECTS ================= -->
+        <section id="projects" class="section projects-section">
+            <div class="section-container">
+                
+                <div class="section-header-center">
+                    <span class="section-tag glow-tag">Portfolio Showcase</span>
+                    <h2 class="section-heading">
+                        I Make Incredible <span class="highlight-purple">Projects</span>
+                    </h2>
+                    <p class="section-subtitle">
+                        Handcrafted frontend applications built with responsive design and clean code.
+                    </p>
+                </div>
+
+                <!-- Projects Horizontal Carousel -->
+                <div class="projects-carousel-container">
+                    <div class="projects-scroll-track" id="projectsTrack">
+
+                        <!-- Project 01: Spotify Clone / Music Player -->
+                        <article class="project-card">
+                            <div class="project-card-header">
+                                <span class="project-num">01</span>
+                                <span class="project-category-badge">Web App</span>
+                            </div>
+                            <div class="project-card-body">
+                                <h3 class="project-title">Spotify Music Player</h3>
+                                <div class="project-tech-block">
+                                    <span class="tech-label">Technologies used</span>
+                                    <p class="tech-list">HTML, CSS, JavaScript, Audio API, Flexbox &amp; Dark UI.</p>
+                                </div>
+                            </div>
+                            <div class="project-card-preview">
+                                <img src="assets/images/project1_spotify.jpg" alt="Spotify Web Music Player" class="project-screenshot-img">
+                            </div>
+                        </article>
+
+                        <!-- Project 02: User Persona & Journey Interface -->
+                        <article class="project-card">
+                            <div class="project-card-header">
+                                <span class="project-num">02</span>
+                                <span class="project-category-badge">UI / Web</span>
+                            </div>
+                            <div class="project-card-body">
+                                <h3 class="project-title">Customer Journey Portal</h3>
+                                <div class="project-tech-block">
+                                    <span class="tech-label">Technologies used</span>
+                                    <p class="tech-list">HTML, CSS, JavaScript, Modern Card Layouts &amp; Responsive Grid.</p>
+                                </div>
+                            </div>
+                            <div class="project-card-preview">
+                                <img src="assets/images/project2_cards.jpg" alt="Customer Journey & Persona Cards" class="project-screenshot-img">
+                            </div>
+                        </article>
+
+                        <!-- Project 03: Tech & Workspace Showcase -->
+                        <article class="project-card">
+                            <div class="project-card-header">
+                                <span class="project-num">03</span>
+                                <span class="project-category-badge">Web</span>
+                            </div>
+                            <div class="project-card-body">
+                                <h3 class="project-title">Tech Workspace Showcase</h3>
+                                <div class="project-tech-block">
+                                    <span class="tech-label">Technologies used</span>
+                                    <p class="tech-list">HTML, CSS, CSS Grid, Responsive Images &amp; Hover Effects.</p>
+                                </div>
+                            </div>
+                            <div class="project-card-preview">
+                                <img src="assets/images/project3_techgrid.jpg" alt="Tech Gadgets & Workspace Grid" class="project-screenshot-img">
+                            </div>
+                        </article>
+
+                        <!-- Project 04: QuickGPT AI Assistant -->
+                        <article class="project-card">
+                            <div class="project-card-header">
+                                <span class="project-num">04</span>
+                                <span class="project-category-badge">AI Web App</span>
+                            </div>
+                            <div class="project-card-body">
+                                <h3 class="project-title">QuickGPT AI Assistant</h3>
+                                <div class="project-tech-block">
+                                    <span class="tech-label">Technologies used</span>
+                                    <p class="tech-list">React.js, CSS3, JavaScript, AI Chat Interface &amp; Dark Theme.</p>
+                                </div>
+                            </div>
+                            <div class="project-card-preview">
+                                <img src="assets/images/project4_quickgpt.jpg" alt="QuickGPT AI Assistant" class="project-screenshot-img">
+                            </div>
+                        </article>
+
+                        <!-- Project 05: Task Management Dashboard -->
+                        <article class="project-card">
+                            <div class="project-card-header">
+                                <span class="project-num">05</span>
+                                <span class="project-category-badge">Dashboard</span>
+                            </div>
+                            <div class="project-card-body">
+                                <h3 class="project-title">Task Manager Dashboard</h3>
+                                <div class="project-tech-block">
+                                    <span class="tech-label">Technologies used</span>
+                                    <p class="tech-list">React.js, JavaScript, CSS Grid, Task Tracking &amp; State Logic.</p>
+                                </div>
+                            </div>
+                            <div class="project-card-preview">
+                                <img src="assets/images/project5_taskmanager.png" alt="Task Management Dashboard" class="project-screenshot-img">
+                            </div>
+                        </article>
+
+                        <!-- Project 06: WDM Store Electronics E-Commerce -->
+                        <article class="project-card">
+                            <div class="project-card-header">
+                                <span class="project-num">06</span>
+                                <span class="project-category-badge">E-Commerce</span>
+                            </div>
+                            <div class="project-card-body">
+                                <h3 class="project-title">WDM Electronics Store</h3>
+                                <div class="project-tech-block">
+                                    <span class="tech-label">Technologies used</span>
+                                    <p class="tech-list">HTML5, CSS3, JavaScript, React.js, Category Filtering &amp; Cart System.</p>
+                                </div>
+                            </div>
+                            <div class="project-card-preview">
+                                <img src="assets/images/project6_wdmstore.jpg" alt="WDM Store E-Commerce" class="project-screenshot-img">
+                            </div>
+                        </article>
+
+                    </div>
+
+                    <!-- Carousel Dot Indicators Only -->
+                    <div class="carousel-nav-controls">
+                        <div class="carousel-indicator-dots" id="carouselDots">
+                            <span class="indicator-dot active" data-index="0"></span>
+                            <span class="indicator-dot" data-index="1"></span>
+                            <span class="indicator-dot" data-index="2"></span>
+                            <span class="indicator-dot" data-index="3"></span>
+                            <span class="indicator-dot" data-index="4"></span>
+                            <span class="indicator-dot" data-index="5"></span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ================= PAGE 4: MY WORK EXPERIENCE / JOURNEY ================= -->
+        <section id="journey" class="section journey-section">
+            <div class="section-container">
+                
+                <div class="section-header-center">
+                    <span class="section-tag glow-tag">Background &amp; Timeline</span>
+                    <h2 class="section-heading">
+                        My Work <span class="highlight-purple">Experience</span>
+                    </h2>
+                </div>
+
+                <!-- 3-Way Tabs: Projects, Education, Experience -->
+                <div class="journey-tab-control">
+                    <div class="tab-pill-box">
+                        <button class="journey-tab-btn active" data-target="tab-projects">
+                            <i class="ri-folder-code-line"></i>
+                            <span>Projects</span>
+                        </button>
+                        <button class="journey-tab-btn" data-target="tab-education">
+                            <i class="ri-graduation-cap-line"></i>
+                            <span>Education</span>
+                        </button>
+                        <button class="journey-tab-btn" data-target="tab-experience">
+                            <i class="ri-briefcase-line"></i>
+                            <span>Experience</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tab Content Panels -->
+                <div class="journey-tab-panels">
+
+                    <!-- Panel 1: Projects (Selected 01, 05, 06 from Page 3) -->
+                    <div class="tab-panel active" id="tab-projects">
+                        <div class="timeline-wrapper">
+                            <div class="timeline-line"></div>
+
+                            <!-- 01: Spotify Music Player -->
+                            <div class="timeline-row">
+                                <div class="timeline-left-title">
+                                    <h3 class="timeline-role-name">Spotify Music Player</h3>
+                                    <span class="timeline-company-name">HTML, CSS, JavaScript, Audio API</span>
+                                </div>
+                                <div class="timeline-center-node">
+                                    <span class="timeline-badge-year">01</span>
+                                    <div class="timeline-dot-ring"></div>
+                                </div>
+                                <div class="timeline-right-desc">
+                                    <p>
+                                        Interactive music streaming player web app featuring tracklist playlist, live seek progress bar, and play/pause controls.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- 02: Task Manager Dashboard (Card 05) -->
+                            <div class="timeline-row">
+                                <div class="timeline-left-title">
+                                    <h3 class="timeline-role-name">Task Manager Dashboard</h3>
+                                    <span class="timeline-company-name">React.js, JavaScript, CSS Grid</span>
+                                </div>
+                                <div class="timeline-center-node">
+                                    <span class="timeline-badge-year">02</span>
+                                    <div class="timeline-dot-ring"></div>
+                                </div>
+                                <div class="timeline-right-desc">
+                                    <p>
+                                        Employee task overview and tracking dashboard with real-time status counters, task creation flow, and responsive grid layout.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- 03: WDM Electronics Store (Card 06) -->
+                            <div class="timeline-row">
+                                <div class="timeline-left-title">
+                                    <h3 class="timeline-role-name">WDM Electronics Store</h3>
+                                    <span class="timeline-company-name">HTML5, CSS3, JavaScript, React.js</span>
+                                </div>
+                                <div class="timeline-center-node">
+                                    <span class="timeline-badge-year">03</span>
+                                    <div class="timeline-dot-ring"></div>
+                                </div>
+                                <div class="timeline-right-desc">
+                                    <p>
+                                        Modern e-commerce platform with search functionality, dynamic electronics category filter, product cards, and cart interface.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel 2: Education -->
+                    <div class="tab-panel" id="tab-education">
+                        <div class="timeline-wrapper">
+                            <div class="timeline-line"></div>
+
+                            <div class="timeline-row">
+                                <div class="timeline-left-title">
+                                    <h3 class="timeline-role-name">Bachelor of Commerce (B.Com)</h3>
+                                    <span class="timeline-company-name">Prabhudas Thakkar Arts And Comm College</span>
+                                </div>
+                                <div class="timeline-center-node">
+                                    <span class="timeline-badge-year">2021 - 2024</span>
+                                    <div class="timeline-dot-ring"></div>
+                                </div>
+                                <div class="timeline-right-desc">
+                                    <p>
+                                        Graduated in Commerce with comprehensive knowledge of accounting, financial analysis, precision bookkeeping, and business management.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-row">
+                                <div class="timeline-left-title">
+                                    <h3 class="timeline-role-name">Higher Secondary Certificate (HSC)</h3>
+                                    <span class="timeline-company-name">Shree Swaminarayan High School</span>
+                                </div>
+                                <div class="timeline-center-node">
+                                    <span class="timeline-badge-year">2020</span>
+                                    <div class="timeline-dot-ring"></div>
+                                </div>
+                                <div class="timeline-right-desc">
+                                    <p>
+                                        Completed Higher Secondary Schooling with foundation in analytical problem-solving and computer fundamentals.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel 3: Experience (Frontend First as Now, USA Accounting as 2021 - Present) -->
+                    <div class="tab-panel" id="tab-experience">
+                        <div class="timeline-wrapper">
+                            <div class="timeline-line"></div>
+
+                            <!-- Item 1: Frontend Developer (Now) -->
+                            <div class="timeline-row">
+                                <div class="timeline-left-title">
+                                    <h3 class="timeline-role-name">Frontend Developer</h3>
+                                    <span class="timeline-company-name">Self-Driven Learning &amp; Projects</span>
+                                </div>
+                                <div class="timeline-center-node">
+                                    <span class="timeline-badge-year">Now</span>
+                                    <div class="timeline-dot-ring"></div>
+                                </div>
+                                <div class="timeline-right-desc">
+                                    <p>
+                                        Actively building responsive, user-friendly, and modern web applications with HTML, CSS, JavaScript, React.js, and Tailwind CSS. Continuously refining practical development skills.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Item 2: USA Accounting (2021 - Present) -->
+                            <div class="timeline-row">
+                                <div class="timeline-left-title">
+                                    <h3 class="timeline-role-name">USA Accounting Professional</h3>
+                                    <span class="timeline-company-name">Professional Background</span>
+                                </div>
+                                <div class="timeline-center-node">
+                                    <span class="timeline-badge-year">2021-Present</span>
+                                    <div class="timeline-dot-ring"></div>
+                                </div>
+                                <div class="timeline-right-desc">
+                                    <p>
+                                        Experienced in USA accounting operations, managing financial ledger accuracy, CPA documentation compliance, payroll reconciliation, and tax workflows.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= PAGE 5: SKILLS ================= -->
+        <section id="skills" class="section skills-section">
+            <div class="section-container">
+                
+                <div class="section-header-center">
+                    <h2 class="section-heading">
+                        What I <span class="highlight-purple">Know</span>
+                    </h2>
+                </div>
+
+                <!-- Single Developer Card with Tailwind CSS added -->
+                <div class="skills-card-single-wrapper">
+                    <div class="glow-backdrop-blur"></div>
+                    <div class="skills-card developer-card">
+                        
+                        <div class="skills-card-top">
+                            <h3 class="skills-card-title">Developer</h3>
+                            <p class="skills-card-desc">
+                                Website creation with HTML, CSS, JavaScript. Building responsive, fast, and user-friendly web interfaces with React.js, Tailwind CSS, and GitHub.
+                            </p>
+                        </div>
+
+                        <div class="skills-card-bottom">
+                            <span class="skills-label">Skills &amp; Tools</span>
+                            <div class="skills-badge-list">
+                                <span class="skill-pill"><i class="ri-html5-fill"></i> HTML</span>
+                                <span class="skill-pill"><i class="ri-css3-fill"></i> CSS</span>
+                                <span class="skill-pill"><i class="ri-javascript-fill"></i> JavaScript</span>
+                                <span class="skill-pill"><i class="ri-reactjs-fill"></i> React.js</span>
+                                <span class="skill-pill"><i class="ri-tailwind-css-fill"></i> Tailwind CSS</span>
+                                <span class="skill-pill"><i class="ri-github-fill"></i> GitHub</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ================= PAGE 6: CONTACT & FOOTER ================= -->
+        <section id="contact" class="section contact-section-clean">
+            <div class="section-container">
+                
+                <!-- Center Heading -->
+                <div class="section-header-center contact-header-clean">
+                    <h2 class="section-heading contact-main-title">Contact Me</h2>
+                    <p class="section-subtitle contact-main-subtitle">Tell me about your next project.</p>
+                    
+                    <!-- Big Glowing Copy Email Button -->
+                    <div class="copy-email-hero-wrapper">
+                        <button class="hero-copy-email-btn" id="copyEmailBtn">
+                            <span id="copyBtnText">Copy email</span>
+                            <i class="ri-file-copy-line" id="copyBtnIcon"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Clean 2-Columns Layout (Email/Location on Left, Social Media on Right) -->
+                <div class="contact-columns-layout-2col">
+                    
+                    <!-- Column 1: Email & Location -->
+                    <div class="contact-col-item">
+                        <div class="contact-col-group">
+                            <h3 class="contact-col-heading">Email</h3>
+                            <a href="mailto:pawarchirag522@gmail.com" class="contact-col-link">pawarchirag522@gmail.com</a>
+                        </div>
+                        <div class="contact-col-group">
+                            <h3 class="contact-col-heading">Location</h3>
+                            <span class="contact-col-text">Ahmedabad, Gujarat, India</span>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Social Media -->
+                    <div class="contact-col-item">
+                        <h3 class="contact-col-heading">Social Media</h3>
+                        <ul class="contact-col-links-list">
+                            <li>
+                                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="contact-arrow-link">
+                                    <span>Linkedin</span> <i class="ri-arrow-right-up-line"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="contact-arrow-link">
+                                    <span>GitHub</span> <i class="ri-arrow-right-up-line"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:chiragpawar@gmail.com" class="contact-arrow-link">
+                                    <span>Gmail</span> <i class="ri-arrow-right-up-line"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Clean Footer -->
+    <footer class="footer-clean">
+        <div class="footer-clean-container">
+            <p class="footer-clean-text">All Rights Reserved By <span class="footer-author-highlight">Chirag Pawar</span></p>
+            <p class="footer-clean-sub">&copy; <span id="currentYear"></span></p>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
