@@ -85,6 +85,7 @@ button {
     pointer-events: none;
     z-index: 0;
     opacity: 0.4;
+    max-width: 100vw; /* Prevents horizontal scroll on small screens */
 }
 
 .glow-top-left {
@@ -368,7 +369,6 @@ button {
     color: #ffffff;
 }
 
-/* Social Icon Buttons directly under Name */
 .hero-social-icons-group {
     display: flex;
     align-items: center;
@@ -410,7 +410,6 @@ button {
     filter: drop-shadow(0 0 20px rgba(168, 85, 247, 0.5));
 }
 
-/* Resume Pill Button on Right Side */
 .hero-resume-wrapper {
     margin-top: 1.5rem;
     display: flex;
@@ -438,7 +437,6 @@ button {
     color: #ffffff;
 }
 
-/* Center Avatar Photo Frame with Purple Ambient Glow */
 .hero-center {
     display: flex;
     justify-content: center;
@@ -680,7 +678,6 @@ button {
     line-height: 1.5;
 }
 
-/* Line-to-line aligned screenshot images */
 .project-card-preview {
     width: 100%;
     height: 180px;
@@ -703,7 +700,6 @@ button {
     transform: scale(1.05);
 }
 
-/* Carousel Dot Indicators */
 .carousel-nav-controls {
     display: flex;
     align-items: center;
@@ -743,7 +739,7 @@ button {
 }
 
 /* --------------------------------------------------
-   9. PAGE 4: JOURNEY TIMELINE (PROJECTS, EDUCATION, EXP)
+   9. PAGE 4: JOURNEY TIMELINE
    -------------------------------------------------- */
 .journey-section {
     background: rgba(10, 9, 15, 0.5);
@@ -902,7 +898,7 @@ button {
 }
 
 /* --------------------------------------------------
-   10. PAGE 5: SKILLS (SINGLE DEVELOPER CARD)
+   10. PAGE 5: SKILLS
    -------------------------------------------------- */
 .skills-card-single-wrapper {
     position: relative;
@@ -1035,7 +1031,6 @@ button {
     margin-bottom: 2rem;
 }
 
-/* Glowing Center Copy Email Button */
 .copy-email-hero-wrapper {
     position: relative;
     display: inline-flex;
@@ -1073,7 +1068,6 @@ button {
     color: #c084fc;
 }
 
-/* 2-Columns Layout */
 .contact-columns-layout-2col {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1148,7 +1142,6 @@ button {
     color: #c084fc;
 }
 
-/* Clean Footer */
 .footer-clean {
     position: relative;
     z-index: 10;
@@ -1187,9 +1180,11 @@ button {
     color: var(--text-muted);
 }
 
-/* --------------------------------------------------
-   12. RESPONSIVE MEDIA QUERIES
-   -------------------------------------------------- */
+/* ==========================================================================
+   12. RESPONSIVE MEDIA QUERIES (FULLY UPGRADED)
+   ========================================================================== */
+
+/* --- LAPTOP & TABLET (Max-width 1024px) --- */
 @media (max-width: 1024px) {
     .hero-container {
         grid-template-columns: 1fr 1fr;
@@ -1197,13 +1192,25 @@ button {
     }
     .hero-left { grid-column: 1 / 2; }
     .hero-right { grid-column: 2 / 3; text-align: left; }
-    .hero-center { grid-column: 1 / -1; order: 3; }
+    .hero-resume-wrapper { justify-content: flex-start; }
+    .hero-center { grid-column: 1 / -1; order: 3; margin-top: 2rem; }
+    
     .hero-title { font-size: 2.8rem; }
-    .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .section-heading { font-size: 2.3rem; }
+    
+    .about-grid { grid-template-columns: 1fr; gap: 3rem; text-align: center; }
+    .about-image-col { order: 2; margin-top: 1rem; }
+    .about-content-col { order: 1; align-items: center; }
+    .about-text-content { text-align: center; }
+    .about-action-row { justify-content: center; }
+    
     .project-card { flex: 0 0 calc(50% - 1rem); }
+    .timeline-row { grid-template-columns: 1fr 100px 1fr; }
 }
 
+/* --- MOBILE & SMALL TABLET (Max-width 768px) --- */
 @media (max-width: 768px) {
+    /* Navbar / Menu */
     .navbar { height: 70px; }
     .nav-menu {
         position: fixed;
@@ -1215,21 +1222,92 @@ button {
         padding: 2rem;
         transform: translateY(-150%);
         transition: transform 0.35s ease;
+        z-index: 999;
     }
     .nav-menu.open { transform: translateY(0); }
     .nav-list { flex-direction: column; gap: 1.5rem; align-items: flex-start; }
     .mobile-toggle { display: block; }
-    .hero-container { grid-template-columns: 1fr; text-align: center; padding: 1rem; }
-    .hero-left, .hero-right { text-align: center; }
-    .hero-social-icons-group { justify-content: center; }
+    
+    /* General Spacing */
+    .section { padding: 4rem 0; }
+    .section-container { padding: 0 1.5rem; }
+    
+    /* Hero Section */
+    .hero-container { grid-template-columns: 1fr; text-align: center; gap: 2rem; }
+    .hero-left, .hero-right { grid-column: 1 / -1; text-align: center; }
     .hero-resume-wrapper { justify-content: center; }
+    .hero-social-icons-group { justify-content: center; }
     .hero-title { font-size: 2.3rem; }
-    .section-heading { font-size: 2.1rem; }
+    
+    /* Responsive Scale for Avatars */
+    .hero-avatar-wrapper, .about-card-wrapper {
+        width: 280px;
+        height: 380px;
+    }
+    .avatar-glow-ring, .about-glow-halo {
+        width: 290px;
+        height: 390px;
+    }
+
+    .section-heading { font-size: 2rem; }
     .project-card { flex: 0 0 100%; max-width: 100%; }
-    .timeline-row { grid-template-columns: 1fr; gap: 1rem; }
-    .timeline-left-title { text-align: left; }
+    
+    /* Journey / Timeline (Restructured for Mobile view) */
+    .journey-tab-btn { padding: 0.6rem 1rem; font-size: 0.85rem; }
+    .tab-pill-box { flex-wrap: wrap; justify-content: center; }
+    
+    .timeline-wrapper { gap: 1.5rem; }
+    .timeline-row { 
+        display: flex; 
+        flex-direction: column; 
+        padding-left: 45px; 
+        position: relative;
+        text-align: left;
+    }
     .timeline-line { left: 15px; transform: none; }
-    .timeline-center-node { align-items: flex-start; padding-left: 35px; }
-    .timeline-right-desc { margin-left: 35px; }
+    
+    .timeline-center-node { 
+        position: static; 
+        flex-direction: row; 
+        justify-content: flex-start;
+        margin-bottom: 0.5rem;
+        order: 1; /* Puts badge at the top */
+    }
+    .timeline-dot-ring { 
+        position: absolute; 
+        left: 8px; /* Aligns with 15px line */
+        top: 5px; 
+        margin-top: 0; 
+    }
+    .timeline-badge-year { margin-left: 0; }
+
+    .timeline-left-title { text-align: left; padding: 0; order: 2; }
+    .timeline-right-desc { margin-top: 0.5rem; padding: 1.2rem; order: 3; }
+    
+    /* Contact */
     .contact-columns-layout-2col { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+
+/* --- EXTRA SMALL MOBILE (Max-width 480px) --- */
+@media (max-width: 480px) {
+    .hero-title { font-size: 2rem; }
+    .section-heading { font-size: 1.8rem; }
+    
+    /* Scale Avatars down more for small phones */
+    .hero-avatar-wrapper, .about-card-wrapper {
+        width: 250px;
+        height: 340px;
+    }
+    .avatar-glow-ring, .about-glow-halo {
+        width: 260px;
+        height: 350px;
+    }
+    
+    /* Shrink Skills Card */
+    .skills-card { padding: 1.5rem 1.2rem; }
+    .skills-card-title { font-size: 1.8rem; }
+    
+    /* Adjust Buttons */
+    .copy-email-hero-wrapper .hero-copy-email-btn { padding: 0.75rem 1.5rem; font-size: 0.9rem; }
+    .contact-main-title { font-size: 2.2rem; }
 }
